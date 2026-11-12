@@ -14,6 +14,13 @@ public class Patient extends Person {
     private String email;
     private List<Appointment> visitHistory;
 
+    // Default constructor
+    public Patient() {
+        super();
+        this.visitHistory = new ArrayList<>();
+    }
+
+    // Parameterized constructor
     public Patient(String firstName, String lastName, String phone,
                    LocalDate dateOfBirth, String bloodGroup, String email) {
 
@@ -97,4 +104,16 @@ public class Patient extends Person {
             throw new IllegalArgumentException("Invalid Patient ID");
         }
     }
+
+    public void validateUniqueEmail(List<Patient> patients) {
+
+        for (Patient patient : patients) {
+            if (patient.getEmail().equalsIgnoreCase(this.email)) {
+                throw new IllegalArgumentException(
+                        "Patient already registered with this email"
+                );
+            }
+        }
+    }
+
 }

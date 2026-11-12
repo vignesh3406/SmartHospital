@@ -10,6 +10,10 @@ public class Prescription {
     private int durationDays;
     private String instructions;
 
+    // Default constructor
+    public Prescription() {
+    }
+
     // Parameterized constructor
     public Prescription(Appointment appointment,
                         String medicationName,

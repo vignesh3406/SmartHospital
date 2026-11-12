@@ -19,6 +19,11 @@ public class Appointment {
         COMPLETED
     }
 
+    // Default constructor
+    public Appointment() {
+        this.status = AppointmentStatus.SCHEDULED;
+    }
+
     // Parameterized constructor
     public Appointment(Patient patient, Doctor doctor,
                        LocalDateTime appointmentDateTime) {

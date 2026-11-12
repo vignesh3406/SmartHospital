@@ -15,6 +15,11 @@ public abstract class Person {
         setPhone(phone);
     }
 
+    public Person()
+    {
+
+    }
+
     // Getters
     public int getPersonId() {
         return personId;

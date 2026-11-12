@@ -6,14 +6,20 @@ import java.time.temporal.WeekFields;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import entity.Schedulable;
 
-public class Doctor extends Person {
+public class Doctor extends Person implements Schedulable{
 
     private int doctorId;
     private String specialization;
     private double consultationFee;
     private List<Appointment> schedule;
 
+    // Default constructor
+    public Doctor() {
+        super();
+        this.schedule = new ArrayList<>();
+    }
 
     // Parameterized constructor
     public Doctor(String firstName, String lastName, String phone,

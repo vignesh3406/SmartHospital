@@ -12,6 +12,10 @@ public class Clinic {
     private String address;
     private List<Doctor> doctors;
 
+    // Default constructor
+    public Clinic() {
+        this.doctors = new ArrayList<>();
+    }
 
     // Parameterized constructor
     public Clinic(String clinicName, String address) {
